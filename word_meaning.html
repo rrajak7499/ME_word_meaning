@@ -1,0 +1,657 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Word Meaning </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="aaaa5fa7-72ef-4162-8449-2cfbc6107019" class="page serif"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💃🏻</span></div><h1 class="page-title">Word Meaning </h1></header><div class="page-body"><ul id="4dab0440-9fdc-4ab0-bcc9-ddbaed133364" class="toggle"><li><details open=""><summary><time>@February 24, 2022</time></summary><ul id="6cbd9352-c9a5-4871-b603-6d380f3c6e98" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Frown </strong></mark>- नाक, भौंह सुकुरना</li></ul><ul id="8b5b2b12-6277-4d27-99c3-63c1f0fcdb31" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Hippy </strong></mark>- बारे बाल वाला लड़का</li></ul><ul id="c0544802-46c6-4d30-85dd-eeecb7936443" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Talk </strong></mark>- बोलना</li></ul><ul id="a4acc466-951e-46ff-a50c-7e62980348a6" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Listen </strong></mark>- सुन्ना</li></ul><ul id="1998030f-d618-4788-bb9b-cb80c3b9e64b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Couch Potato</strong></mark> - बिना हेले डोले बैठने वाला वयक्ति</li></ul><ul id="32f2105c-1e27-4714-8ec2-f5e5af8f063d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Pick up</strong></mark> - उठाना</li></ul><ul id="b1c82669-1c55-499d-b431-78c04403f8c2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Handkerchief</strong></mark><mark class="highlight-red"> </mark>- रुमाल</li></ul><ul id="65b49bc2-a3e7-461b-afb8-6f5b52b1d46e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Kerchief </strong></mark>- कपडे का छोटा टुकड़ा</li></ul><ul id="2d7aac7e-335b-4fa8-b871-a05e92cf22fb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Encourage </strong></mark>- उत्साहित करना</li></ul><ul id="b2498b04-e823-4c6c-9bb7-088b38243eb1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Call </strong></mark>- बुलाना, पुकारना</li></ul><ul id="20a574c5-bddb-4c51-9ac8-8a0ed7cb0111" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Properly </strong></mark>- पूर्ण रूप से</li></ul><ul id="f07be7a5-70df-40af-a6bb-eed5491cf6d3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Podium </strong></mark>- भासन देने का मेज, Lecture desk</li></ul><ul id="cc499cfa-bfdf-4dc0-b289-009a1ea5ebbf" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Balloon </strong></mark>- बलून</li></ul><ul id="61b44dd8-dee8-4348-9a3d-0e2ee9b16452" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Smoke </strong></mark>- धुवां</li></ul><ul id="98a2b2aa-1710-48c7-9757-9664c4438b24" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Cigarette </strong></mark>- सिगरेट</li></ul><ul id="3fda8c17-2bba-43cc-a569-21064cc5cf9b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Hubble Bubble</strong></mark> - हुक्का</li></ul><ul id="f8f409b7-1c40-4e42-a32a-36d23fe18a20" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Chew </strong></mark>- चबाना</li></ul><ul id="21725ffe-db57-4c61-814b-16c18ddc4eb3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Betel </strong></mark>- पान</li></ul><ul id="270c3b82-8941-466c-b76e-1d1112be0b1e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Nails </strong></mark>- नाख़ून</li></ul><ul id="807011e3-b1d3-4d6d-aab0-c0bfc51af800" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Nail </strong></mark>- कील</li></ul><ul id="f3c3a5b0-b62a-42fd-9bde-daf28a8a2356" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Sneeze </strong></mark>- छींकना</li></ul><ul id="aa45c250-8007-4bb4-a849-4a42134e82dc" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Hiccup </strong></mark>- हिचकी, हिचकी लेना</li></ul><ul id="09ee8e90-45a2-42dc-a98a-2e170ebf8899" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Cough </strong></mark>- खांसी</li></ul><ul id="18645c20-28f9-4a8b-bda3-2069737272b9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Phlegm </strong></mark>- बलगम</li></ul><ul id="00311866-e8f0-4fc1-bddc-b1e17af87d5a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Saliva </strong></mark>- लार</li></ul><ul id="39cf69e7-0fae-4270-8b10-beb6a21c6c77" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Spit </strong></mark>- थूक</li></ul><ul id="5da0606d-9a67-4d73-8785-ed012ea1f482" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Yawn </strong></mark>- हाँफी</li></ul><ul id="233a86d4-be9b-43df-a6f0-94784cb0463b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Limp </strong></mark>- लंगड़ाना</li></ul><ul id="c89e2a1a-9d48-4531-bda5-1773b9d667a9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Walk </strong></mark>- चलना</li></ul><ul id="a6564e36-00ec-4c31-a495-54aedfb8cfae" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Stammer </strong></mark>- हकलाना</li></ul><ul id="7d48f09f-59dd-46ce-8be0-9bbb2bcadbe9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Shout </strong></mark>- चिल्लाना</li></ul><ul id="7f377a85-9706-4221-a469-640d2a840002" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Snore </strong></mark>- खर्राटा लेना</li></ul><ul id="46d15898-69b9-4b29-962e-019c923d47e2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Tell </strong></mark>- बोलना, बताना, कहना</li></ul><ul id="6a5a968f-86cd-48c7-a820-8f2c38367ae9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Move a bit</strong></mark><strong> </strong>- थोड़ा खिसकये</li></ul><ul id="4d1f37cc-0450-4d8a-8172-31fa15305c6b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Move a side</strong></mark> - बगल हटिये</li></ul><ul id="884267b8-744e-4750-9596-ee9479a17c53" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Move on</strong></mark> - ज़िंदगी मेंआगे बढ़ना</li></ul><ul id="45081af5-6138-4c88-963c-7292462b1510" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Shut </strong></mark>- बंद करना</li></ul><ul id="c5fc79c1-f6cd-4d58-85a7-d0aad974058a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Window </strong></mark>- खिड़की</li></ul><ul id="3c6f64b0-b55b-4f14-890d-8e31936171a1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Latch </strong></mark>- चिटकिल्ली, कुण्डी</li></ul><ul id="9f7eb20e-a436-4de7-9553-db032d2c4503" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Bald </strong></mark>- टकला</li></ul><ul id="a2686c85-2a3a-40fd-aa2e-353e1e494eda" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Oh shit</strong></mark> - धत्तेरी की</li></ul><ul id="b2280363-9715-4e5c-a05f-1d88fd10e643" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Speak ill</strong></mark> - बुराई करना</li></ul><ul id="fb322820-a6a1-42cd-a44e-c3e3e87ab590" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Chuckle </strong></mark>- मुँह दबा के हंसना</li></ul><ul id="ac93cac7-ecb8-4774-a523-3195d13b2e5a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Laugh </strong></mark>- हंसना</li></ul><ul id="45488717-d9f7-4a4c-b9d2-296ef6226ea2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Giggle </strong></mark>- खिलखिला के हंसना</li></ul><ul id="ee8842b2-acbe-4099-9e3f-bfe27bab2910" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Grin </strong></mark>- दांत दिखा कर हंसना</li></ul><ul id="5051d704-efe1-444a-bd66-461b42db6e56" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Cachinnate </strong></mark>- ठिठीहा के हंसना</li></ul><ul id="9d0dab90-961e-4ba3-acf3-f1f7d722b638" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Smile </strong></mark>- मुस्कुराना</li></ul><ul id="529a5e4d-4f83-44c7-8268-926d3146b6e8" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Laugh at</strong></mark> - किसी की हंसी उड़ाना</li></ul></details></li></ul><ul id="aad2b791-6f37-435e-b70a-1b88e943f759" class="toggle"><li><details open=""><summary><time>@February 25, 2022</time> </summary><ul id="3fd4dd27-ffea-41cd-be81-d8f31a058b99" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Goose Bumps </strong></mark>- रोएं खरे होना</li></ul><ul id="4914d63c-00e8-4c8a-8b78-785e5c1b6ee9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Submit </strong></mark>- जमा करना ( कागजात, दस्तावेज )</li></ul><ul id="aa43dd62-6d1f-45bf-8b6f-7eb69ae1e499" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Document </strong></mark> - कागजात</li></ul><ul id="97b7d8a2-b50b-410e-b416-dd94516340a7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Sip / Sup </strong></mark>- सुर सुर करके पीना</li></ul><ul id="12a84523-3e26-4863-a5b1-ceb7957001d9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Take </strong></mark>- चाय, कॉफी, दवा पीना</li></ul><ul id="4ca55100-e679-4c26-982c-973b36f35280" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Slurp </strong></mark>- मुंह से आवाज कर के खाना या पीना</li></ul><ul id="b30d05ba-7cc3-4875-8dcd-a9478f021bdf" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Feed </strong></mark>- खिलाना या पिलाना</li></ul><ul id="17d795a3-4dea-4b92-85af-7cdb78f5ee9f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Soup </strong></mark>- पका हुआ तरल पधार्त</li></ul><ul id="2d56f68c-be5a-4851-86d1-405d51867c87" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Juice </strong></mark>- natural रस</li></ul><ul id="f955e587-471b-4bcd-95b2-29d64d6c698e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Pie </strong></mark>- ( समोसा, खाचोड़ी, लिट्टी ) । शाकाहारी</li></ul><ul id="36ad61eb-14fb-4f3e-b965-10bde08b89f5" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Resaul </strong></mark>- ( समोसा, खाचोड़ी, लिट्टी ) । मांसाहारी</li></ul><ul id="28b36f12-52fa-4859-a4e9-2e5be313d427" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Fritters </strong></mark>- पकोड़ा</li></ul><ul id="09f0609d-33ae-41d1-8bde-14108992f23b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Droll </strong></mark>- मुंह मैं पानी आना</li></ul><ul id="10ccb26b-16bd-4366-85cc-ba3741f10bec" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Hot </strong></mark>- गर्म</li></ul><ul id="cb1596c8-2e89-4917-9196-87ab7c52b33e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Piping hot</strong></mark> - गरमा गर्म</li></ul><ul id="95ffb66c-c8fb-4104-a923-99d9845d06c7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Water Pie </strong></mark>- फुचका, गोलगप्पा</li></ul><ul id="40c970de-fdea-4aec-9b9e-3a133e86ef8b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Butter milk </strong></mark>- लस्सी, छाछ, मट्ठा</li></ul><ul id="abc45bd9-3f7c-4aec-8819-2bca0128c513" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Lisp </strong></mark>- तोतली आवाज मैं बोलना</li></ul><ul id="1dda16fe-3138-4201-9bcb-4ea5f6ac5b87" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Cater </strong></mark>- ववसाई तौर पर खिलाना पिलाना</li></ul><ul id="58b075a1-061f-4f71-bd93-90cb1489b293" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Mind </strong></mark>- ध्यान देना, बुरा मन्ना, दिमाग</li></ul><ul id="ce8a7031-5aa5-4d3e-b4fc-33feab3f3f53" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Diction </strong></mark>- बोलने का तरीका</li></ul><ul id="62c92588-423d-429c-bc9b-b97fba3b2a96" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Improve </strong></mark>- अच्छा करना, सुधारना</li></ul></details></li></ul><ul id="0a9f43da-e2d4-4ad4-b532-581cb6c5a293" class="toggle"><li><details open=""><summary><time>@February 26, 2022</time> </summary><ul id="1a3b1cc8-56a8-4b3e-adae-254d3292fd1a" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Pay attention</mark></strong><strong> </strong>- कान से धयान देना</li></ul><ul id="0fa8661e-c628-4129-9629-ccdb95c427de" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Touch</strong></mark><strong> </strong>- छूना, स्पर्श करना</li></ul><ul id="bfd99eb3-2971-41c5-8567-49ef179f9408" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Bribe / Hush money</strong></mark> - रिश्वत, घुस</li></ul><ul id="1c0593f0-2227-4dfa-bfc5-0b9409ee03cd" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Again</strong></mark> - फिर से कोशिश करना</li></ul><ul id="a2f28a37-598f-43a3-b96c-c6c600dc06e1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Throw</strong></mark> - फेकना</li></ul><ul id="31f13c53-79a6-4ced-a8fb-c3f2fada6dd4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Again and Again</strong></mark> - बार बार कोशिश करना</li></ul><ul id="b7945b94-9ec8-4576-a322-6543bee3a294" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Try </strong></mark>- कोशिश करना</li></ul><ul id="78876f3d-cbe4-4471-97fd-eb91a6efe697" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Find out</mark></strong> - पता करना, पता लगाना</li></ul><ul id="faaec894-4aa2-4511-a888-e305d96fdfb9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Take out </strong></mark>- निकालना</li></ul><ul id="7b94fbd1-05d0-438c-b414-7478ecd22e5e" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Insert </mark></strong>- डालना, घुसना</li></ul></details></li></ul><ul id="a412b355-0349-46dd-96f7-75ba4c65a15b" class="toggle"><li><details open=""><summary><time>@February 28, 2022</time> </summary><ul id="c69e6367-0115-401d-a91d-a1ff65e223ae" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Brave </strong></mark>- बहादुर</li></ul><ul id="0d15e173-f07d-46e0-8654-87a193b749dd" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Sincere </strong></mark>- लगशील</li></ul><ul id="07ae7b94-f6c0-447a-ac71-6fc871b7dfee" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Honest </strong></mark>- ईमानदार</li></ul><ul id="3b3a98b1-840b-43ef-85b2-788efa4ae2b2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Blush </strong></mark>- सर्मना</li></ul><ul id="41a83284-1bcf-45d1-9a5b-22865e3af7e3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Laborious</strong></mark> / <strong><mark class="highlight-red">Hard working </mark></strong>- मेहनती</li></ul><ul id="c971e5cd-89d7-4f29-8f0e-1c6bbbc87a0f" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Don’t be bad</mark></strong> - बुरा मत बनो</li></ul><ul id="98c7f6a6-1793-4af8-b7dd-ab99189bfde4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Don’t be smart</strong></mark> - होसियार मत बनो</li></ul><ul id="7c2cb90a-fe9a-42e7-8f6d-7e0d402d7e48" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Don’t be selfish </strong></mark>- स्वार्थी मत बनो</li></ul><ul id="8358df03-57e7-4105-b08b-8d5d25f4026f" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Don’t be clever</mark></strong> - चालक मत बनो</li></ul><ul id="276d7132-c39b-4075-8e27-370f5f19bf67" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Talkative </strong></mark>- बातूनी</li></ul><ul id="e7c44d28-dfb7-482e-bd95-bb3c86083835" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Studious </mark></strong>- पढ़ाकू</li></ul><ul id="b318b5a0-70c7-41fd-b9ab-716deae6d2c4" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">About </mark></strong>- के बारे मैं</li></ul><ul id="cb55d7f2-9bdd-430d-942c-b04d5ceb2119" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Yourself </strong></mark>- अपने बारे मैं</li></ul><ul id="faa9560b-0b2f-481d-98a3-f541df6f4126" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Don’t be so smart</mark></strong> - इतने स्मार्ट मत बनो</li></ul><ul id="f4835eaa-d456-4447-b82d-8611253fe3cb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Don’t be over smart</strong></mark> - ज़रूरत से ज़यादा स्मार्ट मत बनो</li></ul><ul id="edc06903-967f-4fc6-a35b-7f77aa481d66" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Fragrance </mark></strong>- खुसबू</li></ul><ul id="8d1deae0-adf5-4a7c-9fd2-d43802dad927" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Sprain </strong></mark>- मोच</li></ul></details></li></ul><ul id="694e72f7-e775-4ba7-96ce-5e7353e19a93" class="toggle"><li><details open=""><summary><time>@March 1, 2022</time> </summary><ul id="80b80a9b-4d55-4966-85a4-f39b6717a7d4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Hesitate </strong></mark>- हिचकिचाना</li></ul><ul id="0bc7c202-6912-414d-9692-fc1d4db484f1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Frankly </strong></mark>- साफ साफ बताना</li></ul><ul id="b3325daa-5be4-4137-bbad-7e146d783af7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Abuse </strong></mark>- गली देना</li></ul><ul id="1a764ace-1c69-4c1f-b827-ae750a55198c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Scald </strong></mark>- डाटना</li></ul><ul id="291686b5-2434-4a99-9251-3303603a8f20" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Speak the truth</strong></mark> - सच बोलो</li></ul><ul id="8d38477c-fb53-4161-937d-efe9486805ab" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Tell a lie</strong></mark> - झूट बोलना</li></ul><ul id="c8d67c55-6690-4781-9c2f-cf284433ad33" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Write down</mark></strong><strong> / </strong><mark class="highlight-red"><strong>Put down</strong></mark><strong> / </strong><mark class="highlight-red"><strong>Note Down</strong></mark><strong> / </strong><mark class="highlight-red"><strong>Take down</strong></mark> - लिखो लिखो, जल्दी जल्दी लिखना</li></ul><ul id="6deb4fcb-58dc-4d0a-8f39-cec25eb5b3c6" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Hurry up</mark></strong> - जल्दी करो</li></ul><ul id="d95fb67a-2fd0-4f52-bddf-caffd79c7ea4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Get ready</strong></mark> - तैयार हो जाओ</li></ul><ul id="66e07975-6b76-46a3-a7ac-552642c9d203" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Punctual </strong></mark>- समयनिष्ठ</li></ul><ul id="3629ef8a-2b9f-4f13-a075-f81907808743" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Hardly </strong></mark>- मुश्किल से</li></ul><ul id="bb07c405-e2a5-477c-9059-c125b91cf800" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Properly</strong></mark> - ठीक से</li></ul></details></li></ul><ul id="4087c075-3af5-486f-a53c-f54016866329" class="toggle"><li><details open=""><summary><time>@March 2, 2022</time> </summary><ul id="1a2bb542-1a78-41b0-9bc4-1633fd9d15c3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Him </strong></mark>- लड़का के लिए</li></ul><ul id="905b495b-1c3a-4273-8065-6b1ad6ddd98e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Her </strong></mark>- छोकरी के लिए</li></ul><ul id="d2b0bac1-cae2-4303-a0cd-ffa9310be902" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Let it be</strong></mark> - रहने दो</li></ul><ul id="bdb649cf-7ec6-4d72-8e0f-c2fbcfcc4566" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Shame on you</mark></strong> - खुद पे शर्म करो,      चुल्लू भर पानी मैं दुब कर मर जाओ,     लालत है</li></ul><ul id="eff4ce99-37ee-4431-a68d-8374867a7c6c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Come on ! </strong></mark></li></ul><ul id="545111a1-cf85-4773-aae1-ebc8f6fa67a1" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Get ready</mark></strong> - तैयार होना</li></ul><ul id="68b0793c-5ee7-47e1-b685-4372367cad6d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Poke </strong></mark>- उकसाना, ऊँगली करना</li></ul><ul id="9ee48de9-063a-4b79-bf2c-0036b613258b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Tease </strong></mark>- चिढ़ाना, छेरन ( गलत मकशद नहीं )</li></ul><ul id="edf71f4c-5c3b-41c1-8a1e-2368607ce194" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Molest </strong></mark>- गलत मकशद से छेर छार करना</li></ul><ul id="284facc1-c855-4f81-ad9d-1a9b961676ec" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Final </strong></mark>- अंतिम</li></ul><ul id="b765b906-0b04-4044-8143-4288e085641d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Finale </strong></mark>- समापन (  for tv shows )</li></ul><ul id="76d4c17e-d219-489a-bf64-64ec5aac3a89" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Lemonade</strong></mark> - निम्बू पानी</li></ul><ul id="00ef92e8-fc6c-453d-b24f-0a2f49d7a333" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Blacklist</strong></mark> - अपरोधिओं की सूचि</li></ul><ul id="a9265eb8-26ce-41ab-8727-cb7c963ba7b9" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Blockbuster </mark></strong>- अत्यंत सफल फिल्म या किताब</li></ul><ul id="b7017a37-0ea9-43ae-be8f-ad5031a82fc8" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Stamina </strong></mark>- शारीरिक छमता, दमखम</li></ul><ul id="2343c0e5-7897-43ee-8060-2d66a8abc2ef" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Caliber </strong></mark>- मानशिक छमता</li></ul><ul id="048e6314-ca13-4906-af55-fa46b3bbaf33" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Debut </strong></mark>- किसी खिलाडी या अभिनेता का जनता के सामने पहले प्रदर्शन</li></ul><ul id="8231c143-1cc1-4a70-a497-6a866d2cd5ae" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Toast </strong></mark>- सेकि हुइ पाव रोटी</li></ul></details></li></ul><ul id="fca255ac-e9f5-4f2e-b24e-105b7770d796" class="toggle"><li><details open=""><summary><time>@March 3, 2022</time> </summary><ul id="2f821817-8083-4ed7-bbfd-16c0335535da" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Pick up</strong></mark> - झुक कर किसी चीज़ को उठाना</li></ul><ul id="624fe1f6-6b62-423a-92e2-7389884ab8bd" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Show </strong></mark>- दिखाना</li></ul><ul id="a4fc11e1-d1f5-46d5-8acf-5edd298306bd" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Slippers </strong></mark>- चप्पल</li></ul><ul id="9e48adfe-7dc0-49ce-97c3-b0b88bc37eb2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Laugh at</strong></mark> - किसी की हंसी उड़ाना</li></ul><ul id="c91cb922-3f5e-4bf5-a491-886019422cbe" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Chop </strong></mark>- छोटे छोटे टुकड़े मैं काटना</li></ul><ul id="aed33d35-1daf-45d5-8d76-a48681c48024" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Leave </strong></mark>- छोरना</li></ul><ul id="b526aa37-b542-4409-8388-916e22a84e8b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Stretch </strong></mark>- फैलाना या फैलना (  back to in original state )</li></ul><ul id="0dc33df7-06e4-4e69-a5e2-b5f2f599d095" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Slip</strong></mark> - फिसलना</li></ul><ul id="aa88faa9-b347-483c-ac80-8ea7758d9f81" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Skid </strong></mark>- वाहन का फिसलना</li></ul><ul id="793d3d76-157f-4bb0-9ee7-370630a3c4ff" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Sand </strong></mark>- बालू</li></ul><ul id="ca197f01-ea45-44c6-9f22-057cc05ad411" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Soil </strong></mark>- मिटटी</li></ul><ul id="c135f23f-bde3-40bd-be2e-5f975e8b47a2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Garbage </strong></mark>- कुरा कचड़ा ( dry in nature )</li></ul><ul id="33f0b4a9-5b79-4709-ad60-57b8b763849b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Dump </strong></mark>- कूड़े का ढेर</li></ul><ul id="4070fec2-97a6-44e7-a5eb-ed9cb422a040" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Litter </strong></mark>- कचड़ा ( wet in nature )</li></ul><ul id="2c5f4004-b4f1-424a-afa7-b84b44363312" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Rumour </strong></mark>- अफ़वाह, उड़ती ख़बर</li></ul><ul id="3594bb8c-b152-4fc0-983e-844302b2c73b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Hearsay </strong></mark>- अफ़वाह, उड़ती ख़बर</li></ul><ul id="a6bc7241-00ac-44fd-9d00-864f965b01ca" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Spread </strong></mark>- फैलना ( not back to original state )</li></ul><ul id="291d7317-db27-4edb-bcd2-f18efc368217" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Cosmetics </strong></mark>- श्रिंगार</li></ul><ul id="ebcb05fe-84b8-44b6-b6c6-d94027667851" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Apply</strong></mark> - छोटे छोटे चीज़ को लगाना</li></ul><ul id="694f5fa4-6e41-4a29-ba1d-5163bbc3e33d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Soot </strong></mark>- काजल</li></ul><ul id="b980af23-91a3-4210-a167-40a3ffa69b1d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Ask</strong></mark> - पूछना, मांगना</li></ul><ul id="2b5774b2-a8fe-4063-91c1-3ec8be2e6234" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Balm </strong></mark>- दर्द को भगाने मलहम</li></ul><ul id="ba59038e-e4f2-41c6-9292-0f27b93523fd" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Itch</strong></mark> - खुजलाना</li></ul><ul id="2e1d9de7-5caf-4d5c-8e66-38303d1dee6e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Itching </strong></mark>- खुजली</li></ul><ul id="4e2eade3-3457-45ea-9bbb-3dd8d32a23bd" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Leather </strong></mark>- चमड़ा ( after death skin )</li></ul><ul id="ea5b3e74-b652-489d-8f20-694e70ca08fb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Skin </strong></mark>- चमड़ा ( जींदा मैं )</li></ul><ul id="00dabf69-49d4-4c08-a2a9-e70115431780" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Derm</strong></mark> - चमड़ा ( medical language )</li></ul><ul id="5e272ab3-e9e2-45b5-84e0-c59e0a93a193" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Lotion </strong></mark>- मलहम ( चमड़े के लिए )</li></ul><ul id="90795f33-cf68-4581-a424-720e4f519ee2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Wound </strong></mark>- घाव, जखम</li></ul><ul id="51569f1f-936d-4e0a-8096-f17c1645c187" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Puss </strong></mark>- मवाद</li></ul><ul id="1f66a0f1-30fa-4180-8d4d-de64a11bb7e6" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Blister </strong></mark>- छाला</li></ul><ul id="5461fd77-8aae-48a3-849c-d7dfa0dc0c11" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Mole </strong></mark>- तिल का निशान</li></ul><ul id="edaac606-9047-4204-8f44-cdfbfd461b99" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Mole </strong></mark>- छुछुंदर</li></ul><ul id="4c794965-ce82-4b1d-8674-a7c90c6464f3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Forehead </strong></mark>- ललाठ ( आगे का दिमाग )</li></ul><ul id="8ab4340b-4897-4fd7-81a2-262cad42f268" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Wart </strong></mark>- अहिला, मस्सा</li></ul><ul id="cb92d87b-284a-4466-8e31-b3a496b814ce" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Scar </strong></mark>- कटे फटे या घाव इत्यादि का निशान</li></ul><ul id="df69b67a-66a4-4455-905c-8d108260dd6a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Ointment </strong></mark>- जख्म को भरने का मलहम</li></ul><ul id="a1a3615d-67f5-4dcb-8067-bc229834be13" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Battle </strong></mark>- जमीनी लड़ाई</li></ul><ul id="1593b866-6194-46ba-9922-17484c644033" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>War </strong></mark>- युद्ध</li></ul><ul id="559e7f8c-470b-4bd5-afc8-6be9fce48a81" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Cease </strong></mark>- रोकना ( युद्ध को रोकने के लिए )</li></ul><ul id="d4a5850f-f960-4611-a9d8-fb418fdd4725" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Fetch </strong></mark>- जा कर लाना</li></ul></details></li></ul><ul id="1f986412-9460-4248-b075-d4c8369bf3dc" class="toggle"><li><details open=""><summary><time>@March 4, 2022</time> </summary><ul id="55bd995d-3664-4979-9b8a-9abf14e97b6c" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Do</mark></strong> - करना</li></ul><ul id="e2b4aadc-1bfe-4018-89f4-51e6076b2a14" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Peel </mark></strong>- सब्जियों और फलों के छिलके</li></ul><ul id="bc71d9dc-dbbc-4be3-84e8-8edaa9d2a800" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Peel off</strong></mark> - छिलका छीलना</li></ul><ul id="a38e960d-2f49-4358-8c69-3a276a0c2cc6" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Shake </strong></mark>- हिलना, हिलाना, मिलना, मिलाना</li></ul><ul id="6d61da6d-b905-4147-afdf-5284246c7632" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Shake hand</strong></mark> - हाँथ मिलाना</li></ul><ul id="b66fc103-d29d-4e9a-bfd4-f364f07fe996" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>With me</strong></mark> - के साथ</li></ul><ul id="8b458aab-d213-4b29-8fd2-c85a5a84b369" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Rule </strong></mark>- नियम</li></ul><ul id="6441d24e-7023-4cbc-b39a-52bf6827378f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Law </strong></mark>- कानून</li></ul><ul id="8133fc48-1774-4500-892d-3f3a9065d249" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Rules and Regulation</strong></mark> - नियम एवं कानून</li></ul><ul id="7fb53f5c-052a-441c-ae2c-8e274c07d568" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Law and Order</strong></mark> - कानून वयवस्था</li></ul><ul id="d751280e-072d-495a-947e-1ee2e0ee572a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Discipline</strong></mark> - अनुशाशन</li></ul><ul id="01ba82a8-95cf-47cc-b1b5-af8d04a425d1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Implement </strong></mark>- लगाना</li></ul><ul id="dff153b4-993e-4cb4-ab59-cb5a59e0220a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Impose </strong></mark>- ज़बरदस्ती लगाना, थोपना</li></ul><ul id="9b19d65f-70d7-452c-81b9-e3f413d03cd0" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Curfew </strong></mark>- लोग बंदी</li></ul><ul id="5b35d316-ae5e-413b-9dd0-6127681f96af" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Levy tax</strong></mark> - किसी भी तरह से टैक्स लगाना</li></ul><ul id="2b1e77ad-4409-4f06-bc35-9a9362f5fc2f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Fear</strong></mark> - डर</li></ul><ul id="2992d7ba-e898-4eb4-bb2b-71a206151ed5" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Remove </strong></mark>- हटाना, उतारना, दूर करना</li></ul></details></li></ul><ul id="011ebe7c-7adc-490f-a725-7bf1f44201f5" class="toggle"><li><details open=""><summary><time>@March 5, 2022</time> </summary><ul id="775585b4-ffb8-4424-8ada-c1e46c113382" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Churn </strong></mark>- मंथन करना, मथना</li></ul><ul id="79b87742-4af5-43b1-a2a4-f879585fb91a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Guy </strong></mark>- लड़का लड़की दोनों के लिए</li></ul><ul id="06b54eb9-32fe-477c-b543-5471c3e95104" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Dude </strong></mark>- लड़का के लिए</li></ul><ul id="77be22e2-fb3a-47b7-b9ac-16d918dd5fc4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Dud </strong></mark>- असफल वयक्ति</li></ul><ul id="6c986cfc-3fc0-4082-8b31-4aef84ed280c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Babe </strong></mark>- युवती</li></ul><ul id="58424780-559d-4572-9a31-96e9031081b3" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Babes </mark></strong>- बहुत साडी युवती</li></ul><ul id="392bd003-d8ee-4a82-aa3a-ae706da0e917" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Senorita </strong></mark>- युवती</li></ul><ul id="f9cd21cf-8e57-440d-8f4f-fcbe9ee06040" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Lad </strong></mark>- छौरा</li></ul><ul id="96959d1a-e707-430d-b806-94b37a22a50c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Lass </strong></mark>- छौरी</li></ul></details></li></ul><ul id="382fa249-b84d-4547-a8f8-a9d9343f0ffa" class="toggle"><li><details open=""><summary><time>@March 7, 2022</time> </summary><ul id="620bfb3d-3e34-4757-8719-e1c6e1afeca2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Save </strong></mark>- बचाना, भविष्य में काम आना</li></ul><ul id="577779c1-dc97-476f-a6fa-e815c0753ace" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Rescue </strong></mark>- मौत के मुंह से बचा लेना</li></ul><ul id="9da4a788-c711-4a7a-aeb3-e72d8b008a84" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>From </strong></mark>- से</li></ul><ul id="9f7e83e7-491f-445b-a841-a081b258e180" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Flood </strong></mark>- बाढ़</li></ul><ul id="6e8f7767-535a-4eff-9d17-876210fb774f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Acciedent </strong></mark>- दुर्घटना</li></ul><ul id="8c7ca03e-c689-4232-8392-359c6b2bcb92" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Trap </strong></mark>- फसना या फसाना</li></ul><ul id="311d5d0f-d340-4ab4-b160-44e24d9954cc" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Cassanova </strong></mark>- दिल फेक आशिक़, सब लड़की पे try मारना</li></ul><ul id="54917eb8-0dd6-43f4-ad7e-3a081dfcfdff" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Seduce </strong></mark>- प्रेम, प्यार या physical relation में फसना</li></ul></details></li></ul><ul id="54bd165a-2256-4dd4-b632-22573d1f6ae7" class="toggle"><li><details open=""><summary><time>@March 8, 2022</time> </summary><ul id="32544786-d631-46d0-b6a5-081d3a50c566" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Spell out</strong></mark> - स्पीलिंग पूछना</li></ul><ul id="b1502f4c-6be0-4bee-ad44-b689267415ec" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Learn </strong></mark>- सिखने या याद करने के लिए</li></ul><ul id="604377c7-c714-40fd-8f19-de708c2c71e3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Memory </strong></mark>- याद-दास्त</li></ul><ul id="830ceeaf-4062-4aea-8938-c785cd64e8ea" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Memorize </strong></mark>- याद करना</li></ul><ul id="ad275a19-81c4-4210-9e72-5b1e6b44730e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Remind </strong></mark>- याद दिलाना</li></ul><ul id="daf1a6c5-e6e4-42e6-9c4c-a5de7d757e97" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Recall </strong></mark>- भूली हुए चीज़ों को पुनः याद करना</li></ul><ul id="762228f7-50d5-4c6d-986a-35e093f79363" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Remember </strong></mark>- हमेशा याद रखना</li></ul><ul id="1f52819e-ebbd-44b4-ac01-d44686dd3dc1" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Abuse </strong></mark>- गाली देना</li></ul><ul id="aafcfe4c-0ab2-4991-814c-db41bcf394da" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Rote </strong></mark>- रट्टा मारना</li></ul><ul id="42a2a6b3-c125-4e13-9e12-b54df0855e73" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Compel </strong></mark>- मजबुर करना, बाध्य करना, विवश करना</li></ul><ul id="e6c6ac52-bd0d-48cf-bdf6-a9dd12b2a8cb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Insist </strong></mark>- ज़िद करना</li></ul><ul id="5fe23864-a8e7-43d3-9a27-8eb1bff94d7a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Force </strong></mark>- ज़बरदस्ती</li></ul></details></li></ul></div></article></body></html>
